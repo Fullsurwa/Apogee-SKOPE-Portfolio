@@ -10,6 +10,7 @@
       margin: 0; padding: 0;
       background-color: #e6e8e9;
       color: #0a192f;
+      scroll-behavior: smooth;
     }
 
     /* Animated gradient header */
@@ -28,24 +29,60 @@
       padding: 60px 20px;
     }
 
+    header .hero {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    header img {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #ffffff;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
     header h1 {
       margin: 0;
-      font-size: 2.5em;
+      font-size: 2.3em;
       letter-spacing: 1px;
     }
 
     header p {
-      font-size: 1.2em;
+      font-size: 1.1em;
       margin-top: 10px;
-      max-width: 700px;
-      margin-left: auto;
-      margin-right: auto;
+      max-width: 600px;
+    }
+
+    .cta {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 24px;
+      background-color: #0a192f;
+      color: #ffffff;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+      text-decoration: none;
+    }
+
+    .cta:hover {
+      background-color: #006666;
     }
 
     section {
       padding: 40px 20px;
       max-width: 900px;
       margin: auto;
+    }
+
+    /* Alternating section backgrounds */
+    section:nth-child(even) {
+      background-color: #f9f9f9;
     }
 
     /* Animated underline for section titles */
@@ -76,15 +113,21 @@
     .card {
       background-color: #ffffff;
       padding: 20px;
-      border-radius: 8px;
+      border-radius: 12px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
     }
 
     footer {
-      background-color: #0a192f;
+      background: linear-gradient(135deg, #0a192f, #008b8b);
       color: #ffffff;
       text-align: center;
-      padding: 20px;
+      padding: 25px;
     }
 
     a {
@@ -92,36 +135,47 @@
       text-decoration: none;
     }
 
-    .cta {
-      display: inline-block;
-      margin-top: 25px;
-      padding: 12px 24px;
-      background-color: #0a192f;
-      color: #ffffff;
-      border-radius: 5px;
-      font-weight: bold;
+    /* Back to top button */
+    #topBtn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #008b8b;
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      width: 45px;
+      height: 45px;
+      font-size: 20px;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
       transition: background-color 0.3s ease;
     }
 
-    .cta:hover {
+    #topBtn:hover {
       background-color: #006666;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Daniel — Project Manager & Aspiring AI Engineer</h1>
-    <p>Helping Kenyan businesses eliminate manual work overdependence through AI-powered workflow automation and workforce upskilling</p>
-    <a href="https://apogee-skope-consult-uo21.bolt.host/" class="cta">Visit My Website</a>
+    <div class="hero">
+      <img src="daniel.jpg" alt="Daniel Oswago">
+      <div>
+        <h1>Daniel — Project Manager & Aspiring AI Engineer</h1>
+        <p>Helping Kenyan businesses eliminate manual work overdependence through AI-powered workflow automation and workforce upskilling</p>
+        <a href="https://apogee-skope-consult-uo21.bolt.host/" class="cta">Visit My Website</a>
+      </div>
+    </div>
   </header>
 
   <section>
-    <h2>About Me</h2>
+    <h2>💡 About Me</h2>
     <p>I am an aspiring AI engineer and project manager passionate about helping Kenyan businesses eliminate manual work overdependence and increase productivity through AI-powered workflow automation and workforce upskilling. My focus is on creating intelligent systems that empower teams to work smarter and scale sustainably.</p>
   </section>
 
   <section>
-    <h2>Current Skills</h2>
+    <h2>⚙️ Current Skills</h2>
     <div class="skills">
       <div class="card"><strong>Git</strong> — Version control and collaboration</div>
       <div class="card"><strong>REST APIs</strong> — Integration and automation</div>
@@ -131,7 +185,7 @@
   </section>
 
   <section>
-    <h2>Contact</h2>
+    <h2>📬 Contact</h2>
     <p>Email: <a href="mailto:doswago@gamil.com">doswago@gamil.com</a></p>
     <p>LinkedIn: <a href="https://www.linkedin.com/in/daniel-oswago">linkedin.com/in/daniel-oswago</a></p>
     <p>Website: <a href="https://apogee-skope-consult-uo21.bolt.host/">apogee-skope-consult-uo21.bolt.host</a></p>
@@ -141,5 +195,7 @@
   <footer>
     <p>© 2026 Daniel — Project Manager & AI Engineer | Apogee Skope LLP</p>
   </footer>
+
+  <button id="topBtn" onclick="window.scrollTo({top:0, behavior:'smooth'});">↑</button>
 </body>
 </html>
