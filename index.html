@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Daniel — Project Manager & AI Engineer</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0; padding: 0;
+      background-color: #e6e8e9;
+      color: #0a192f;
+    }
+
+    /* Animated gradient header */
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    header {
+      background: linear-gradient(135deg, #0a192f, #008b8b, #e6e8e9);
+      background-size: 300% 300%;
+      animation: gradientShift 12s ease infinite;
+      color: #ffffff;
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+      letter-spacing: 1px;
+    }
+
+    header p {
+      font-size: 1.2em;
+      margin-top: 10px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    section {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    /* Animated underline for section titles */
+    h2 {
+      display: inline-block;
+      position: relative;
+      margin-bottom: 20px;
+      color: #0a192f;
+    }
+    h2::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+      width: 100%;
+      height: 3px;
+      background: linear-gradient(90deg, #0a192f, #008b8b, #e6e8e9);
+      background-size: 200% 200%;
+      animation: gradientShift 6s linear infinite;
+    }
+
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    footer {
+      background-color: #0a192f;
+      color: #ffffff;
+      text-align: center;
+      padding: 20px;
+    }
+
+    a {
+      color: #008b8b;
+      text-decoration: none;
+    }
+
+    .cta {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 12px 24px;
+      background-color: #0a192f;
+      color: #ffffff;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .cta:hover {
+      background-color: #006666;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Daniel — Project Manager & Aspiring AI Engineer</h1>
+    <p>Helping Kenyan businesses eliminate manual work overdependence through AI-powered workflow automation and workforce upskilling</p>
+    <a href="https://apogee-skope-consult-uo21.bolt.host/" class="cta">Visit My Website</a>
+  </header>
+
+  <section>
+    <h2>About Me</h2>
+    <p>I am an aspiring AI engineer and project manager passionate about helping Kenyan businesses eliminate manual work overdependence and increase productivity through AI-powered workflow automation and workforce upskilling. My focus is on creating intelligent systems that empower teams to work smarter and scale sustainably.</p>
+  </section>
+
+  <section>
+    <h2>Current Skills</h2>
+    <div class="skills">
+      <div class="card"><strong>Git</strong> — Version control and collaboration</div>
+      <div class="card"><strong>REST APIs</strong> — Integration and automation</div>
+      <div class="card"><strong>Claude</strong> — AI model utilization and workflow design</div>
+      <div class="card"><strong>Bolt.new</strong> — AI agent development and deployment</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:doswago@gamil.com">doswago@gamil.com</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/daniel-oswago">linkedin.com/in/daniel-oswago</a></p>
+    <p>Website: <a href="https://apogee-skope-consult-uo21.bolt.host/">apogee-skope-consult-uo21.bolt.host</a></p>
+    <p>GitHub: <a href="https://github.com/Fullsurwa">github.com/Fullsurwa</a></p>
+  </section>
+
+  <footer>
+    <p>© 2026 Daniel — Project Manager & AI Engineer | Apogee Skope LLP</p>
+  </footer>
+</body>
+</html>
